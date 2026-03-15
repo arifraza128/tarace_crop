@@ -65,6 +65,12 @@ importers:
 
   .:
     devDependencies:
+      '@electric-sql/pglite':
+        specifier: ^0.3.16
+        version: 0.3.16
+      pg:
+        specifier: ^8.16.3
+        version: 8.20.0
       prettier:
         specifier: ^3.8.1
         version: 3.8.1

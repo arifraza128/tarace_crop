@@ -198,21 +198,33 @@ async function createDatabase() {
   const isServerless = !!(
     process.env.NETLIFY ||
     process.env.AWS_LAMBDA_FUNCTION_NAME ||
-    process.env.LAMBDA_TASK_ROOT
+    process.env.LAMBDA_TASK_ROOT ||
+    process.env.AWS_EXECUTION_ENV
   );
 
-  if (isServerless) {
-    console.warn(
-      "Serverless environment detected. Using in-memory PGlite seeded with demo data.",
+  let client: PGlite;
+  try {
+    if (isServerless) {
+      console.warn(
+        "Serverless environment detected. Using in-memory PGlite seeded with demo data.",
+      );
+      client = new PGlite();
+    } else {
+      console.warn(
+        "DATABASE_URL is not set. Using embedded PGlite seeded with demo data.",
+      );
+      client = new PGlite({ dataDir: localDataDir });
+    }
+    await initializeLocalDatabase(client);
+  } catch (error) {
+    console.error(
+      "Embedded PGlite init failed. Falling back to in-memory database.",
+      error,
     );
-  } else {
-    console.warn(
-      "DATABASE_URL is not set. Using embedded PGlite seeded with demo data.",
-    );
+    client = new PGlite();
+    await initializeLocalDatabase(client);
   }
 
-  const client = isServerless ? new PGlite() : new PGlite({ dataDir: localDataDir });
-  await initializeLocalDatabase(client);
   return {
     pool: client,
     db: drizzlePglite(client, { schema }),
