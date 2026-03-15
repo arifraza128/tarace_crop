@@ -14,7 +14,7 @@
 # Route all /api/* requests to the serverless function BEFORE the SPA fallback
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/api"
+  to = "/.netlify/functions/api/api/:splat"
   status = 200
   force = true
 
