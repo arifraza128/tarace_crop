@@ -1,0 +1,11 @@
+[build]
+  command = "pnpm --filter @workspace/smart-terrace build"
+  publish = "artifacts/smart-terrace/dist/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
