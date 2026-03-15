@@ -23,6 +23,10 @@ function isApiRequest(url: string): boolean {
   return url.startsWith(`${configuredApiBase}/api`);
 }
 
+function isAuthEndpoint(url: string): boolean {
+  return url.includes("/api/auth/login") || url.includes("/api/auth/register");
+}
+
 function resolveRequestTarget(resource: RequestInfo | URL): RequestInfo | URL {
   const url = getRequestUrl(resource);
   if (!configuredApiBase || !url.startsWith("/api")) {
@@ -43,7 +47,7 @@ window.fetch = async (...args) => {
   // Only intercept requests going to our API
   const url = getRequestUrl(resource);
   
-  if (isApiRequest(url)) {
+  if (isApiRequest(url) && !isAuthEndpoint(url)) {
     const token = localStorage.getItem('stf_token');
     
     if (token) {

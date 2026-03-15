@@ -33,7 +33,8 @@ export default function Login() {
       setError("");
       await login(data);
     } catch (err: any) {
-      setError(err?.response?.data?.error || "Failed to login. Please try again.");
+      const apiError = err?.data?.error || err?.data?.message;
+      setError(apiError || err?.message || "Failed to login. Please try again.");
     }
   };
 

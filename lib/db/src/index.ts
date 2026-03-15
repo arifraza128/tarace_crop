@@ -13,101 +13,103 @@ const localDataDir = path.resolve(
   ".pglite",
 );
 
+const schemaInitializationSql = `
+  create table if not exists users (
+    id serial primary key,
+    name text not null,
+    email text not null unique,
+    password_hash text not null,
+    created_at timestamptz not null default now()
+  );
+
+  create table if not exists farms (
+    id serial primary key,
+    user_id integer not null references users(id),
+    farmer_name text not null,
+    farm_name text not null,
+    location text not null,
+    region_type text not null default 'hilly',
+    terrace_count integer,
+    farm_size text,
+    soil_type text,
+    water_source text,
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now()
+  );
+
+  create table if not exists crops (
+    id serial primary key,
+    user_id integer not null references users(id),
+    farm_id integer references farms(id),
+    crop_name text not null,
+    crop_type text not null,
+    sowing_date text,
+    growth_stage text not null default 'seedling',
+    notes text,
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now()
+  );
+
+  create table if not exists devices (
+    id serial primary key,
+    user_id integer not null references users(id),
+    farm_id integer references farms(id),
+    device_id text not null,
+    device_name text not null,
+    device_type text not null default 'ESP32',
+    status text not null default 'offline',
+    last_sync timestamptz,
+    created_at timestamptz not null default now()
+  );
+
+  create table if not exists sensor_readings (
+    id serial primary key,
+    user_id integer not null references users(id),
+    farm_id integer references farms(id),
+    device_id text,
+    soil_moisture real not null,
+    temperature real not null,
+    humidity real not null,
+    light_intensity real not null,
+    water_level real not null,
+    source_type text not null default 'manual',
+    created_at timestamptz not null default now()
+  );
+
+  create table if not exists alerts (
+    id serial primary key,
+    user_id integer not null references users(id),
+    farm_id integer references farms(id),
+    title text not null,
+    message text not null,
+    severity text not null default 'medium',
+    status text not null default 'active',
+    created_at timestamptz not null default now()
+  );
+
+  create table if not exists recommendations (
+    id serial primary key,
+    user_id integer not null references users(id),
+    farm_id integer references farms(id),
+    category text not null,
+    message text not null,
+    created_at timestamptz not null default now()
+  );
+
+  create table if not exists price_data (
+    id serial primary key,
+    user_id integer not null references users(id),
+    crop_name text not null,
+    price_per_kg real not null,
+    market_name text not null default 'Local Market',
+    unit text not null default 'kg',
+    notes text,
+    created_at timestamptz not null default now()
+  );
+`;
+
 async function initializeLocalDatabase(client: PGlite): Promise<void> {
-  await client.exec(`
-    create table if not exists users (
-      id serial primary key,
-      name text not null,
-      email text not null unique,
-      password_hash text not null,
-      created_at timestamptz not null default now()
-    );
-
-    create table if not exists farms (
-      id serial primary key,
-      user_id integer not null references users(id),
-      farmer_name text not null,
-      farm_name text not null,
-      location text not null,
-      region_type text not null default 'hilly',
-      terrace_count integer,
-      farm_size text,
-      soil_type text,
-      water_source text,
-      created_at timestamptz not null default now(),
-      updated_at timestamptz not null default now()
-    );
-
-    create table if not exists crops (
-      id serial primary key,
-      user_id integer not null references users(id),
-      farm_id integer references farms(id),
-      crop_name text not null,
-      crop_type text not null,
-      sowing_date text,
-      growth_stage text not null default 'seedling',
-      notes text,
-      created_at timestamptz not null default now(),
-      updated_at timestamptz not null default now()
-    );
-
-    create table if not exists devices (
-      id serial primary key,
-      user_id integer not null references users(id),
-      farm_id integer references farms(id),
-      device_id text not null,
-      device_name text not null,
-      device_type text not null default 'ESP32',
-      status text not null default 'offline',
-      last_sync timestamptz,
-      created_at timestamptz not null default now()
-    );
-
-    create table if not exists sensor_readings (
-      id serial primary key,
-      user_id integer not null references users(id),
-      farm_id integer references farms(id),
-      device_id text,
-      soil_moisture real not null,
-      temperature real not null,
-      humidity real not null,
-      light_intensity real not null,
-      water_level real not null,
-      source_type text not null default 'manual',
-      created_at timestamptz not null default now()
-    );
-
-    create table if not exists alerts (
-      id serial primary key,
-      user_id integer not null references users(id),
-      farm_id integer references farms(id),
-      title text not null,
-      message text not null,
-      severity text not null default 'medium',
-      status text not null default 'active',
-      created_at timestamptz not null default now()
-    );
-
-    create table if not exists recommendations (
-      id serial primary key,
-      user_id integer not null references users(id),
-      farm_id integer references farms(id),
-      category text not null,
-      message text not null,
-      created_at timestamptz not null default now()
-    );
-
-    create table if not exists price_data (
-      id serial primary key,
-      user_id integer not null references users(id),
-      crop_name text not null,
-      price_per_kg real not null,
-      market_name text not null default 'Local Market',
-      unit text not null default 'kg',
-      notes text,
-      created_at timestamptz not null default now()
-    );
-  `);
+  await client.exec(schemaInitializationSql);
 
   const existingUsers = await client.query<{ count: string }>("select count(*) as count from users");
   if (Number(existingUsers.rows[0]?.count ?? 0) > 0) {
@@ -179,6 +181,7 @@ async function initializeLocalDatabase(client: PGlite): Promise<void> {
 async function createDatabase() {
   if (process.env.DATABASE_URL) {
     const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    await pool.query(schemaInitializationSql);
     return {
       pool,
       db: drizzleNodePg(pool, { schema }),

@@ -30,7 +30,8 @@ export default function Register() {
       setError("");
       await registerUser(data);
     } catch (err: any) {
-      setError(err?.response?.data?.error || "Failed to register. Please try again.");
+      const apiError = err?.data?.error || err?.data?.message;
+      setError(apiError || err?.message || "Failed to register. Please try again.");
     }
   };
 
