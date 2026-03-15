@@ -1,0 +1,13 @@
+
+[31mfailed to load config from C:\Users\arif3\Downloads\terrece-master\terrece-master\artifacts\smart-terrace\vite.config.ts[39m
+[31merror during build:
+Error: PORT environment variable is required but was not provided.
+    at file:///C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/node_modules/.vite-temp/vite.config.ts.timestamp-1773551968377-ca0973acea959.mjs:9:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:345:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+    at async loadConfigFromBundledFile (file:///C:/Users/arif3/Downloads/terrece-master/terrece-master/node_modules/.pnpm/vite@7.3.1_@types+node@25.3_847d3f1dfd8a5a4dca3b40dafc2c9d32/node_modules/vite/dist/node/chunks/config.js:35909:12)
+    at async bundleAndLoadConfigFile (file:///C:/Users/arif3/Downloads/terrece-master/terrece-master/node_modules/.pnpm/vite@7.3.1_@types+node@25.3_847d3f1dfd8a5a4dca3b40dafc2c9d32/node_modules/vite/dist/node/chunks/config.js:35797:17)
+    at async loadConfigFromFile (file:///C:/Users/arif3/Downloads/terrece-master/terrece-master/node_modules/.pnpm/vite@7.3.1_@types+node@25.3_847d3f1dfd8a5a4dca3b40dafc2c9d32/node_modules/vite/dist/node/chunks/config.js:35764:42)
+    at async resolveConfig (file:///C:/Users/arif3/Downloads/terrece-master/terrece-master/node_modules/.pnpm/vite@7.3.1_@types+node@25.3_847d3f1dfd8a5a4dca3b40dafc2c9d32/node_modules/vite/dist/node/chunks/config.js:35413:22)
+    at async createBuilder (file:///C:/Users/arif3/Downloads/terrece-master/terrece-master/node_modules/.pnpm/vite@7.3.1_@types+node@25.3_847d3f1dfd8a5a4dca3b40dafc2c9d32/node_modules/vite/dist/node/chunks/config.js:33875:19)
+    at async CAC.<anonymous> (file:///C:/Users/arif3/Downloads/terrece-master/terrece-master/node_modules/.pnpm/vite@7.3.1_@types+node@25.3_847d3f1dfd8a5a4dca3b40dafc2c9d32/node_modules/vite/dist/node/cli.js:629:10)[39m

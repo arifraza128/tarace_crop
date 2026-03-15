@@ -1,0 +1,1164 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Smart Terrace Farming System API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: auth
+    description: Authentication
+  - name: farm
+    description: Farm management
+  - name: crops
+    description: Crop management
+  - name: readings
+    description: Sensor readings
+  - name: alerts
+    description: Alert management
+  - name: recommendations
+    description: Recommendations
+  - name: devices
+    description: Device management
+  - name: analytics
+    description: Analytics
+  - name: prices
+    description: Crop price analytics
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /auth/register:
+    post:
+      operationId: register
+      tags: [auth]
+      summary: Register new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterBody"
+      responses:
+        "201":
+          description: User registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /auth/login:
+    post:
+      operationId: login
+      tags: [auth]
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginBody"
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponse"
+        "401":
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /auth/me:
+    get:
+      operationId: getMe
+      tags: [auth]
+      summary: Get current user
+      responses:
+        "200":
+          description: Current user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /farm:
+    get:
+      operationId: getFarm
+      tags: [farm]
+      summary: Get farm profile
+      responses:
+        "200":
+          description: Farm profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Farm"
+        "404":
+          description: Farm not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    post:
+      operationId: createFarm
+      tags: [farm]
+      summary: Create farm profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FarmBody"
+      responses:
+        "201":
+          description: Farm created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Farm"
+    put:
+      operationId: updateFarm
+      tags: [farm]
+      summary: Update farm profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FarmBody"
+      responses:
+        "200":
+          description: Farm updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Farm"
+
+  /crops:
+    get:
+      operationId: getCrops
+      tags: [crops]
+      summary: List all crops
+      responses:
+        "200":
+          description: List of crops
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Crop"
+    post:
+      operationId: createCrop
+      tags: [crops]
+      summary: Create a crop
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CropBody"
+      responses:
+        "201":
+          description: Crop created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Crop"
+
+  /crops/{id}:
+    put:
+      operationId: updateCrop
+      tags: [crops]
+      summary: Update a crop
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CropBody"
+      responses:
+        "200":
+          description: Crop updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Crop"
+        "404":
+          description: Crop not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    delete:
+      operationId: deleteCrop
+      tags: [crops]
+      summary: Delete a crop
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Crop deleted
+        "404":
+          description: Crop not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /readings:
+    get:
+      operationId: getReadings
+      tags: [readings]
+      summary: List sensor readings
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of readings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SensorReading"
+
+  /readings/latest:
+    get:
+      operationId: getLatestReading
+      tags: [readings]
+      summary: Get latest sensor reading
+      responses:
+        "200":
+          description: Latest reading
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SensorReading"
+        "404":
+          description: No readings found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /readings/manual:
+    post:
+      operationId: createManualReading
+      tags: [readings]
+      summary: Create a manual sensor reading
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReadingBody"
+      responses:
+        "201":
+          description: Reading created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SensorReading"
+
+  /readings/demo:
+    post:
+      operationId: createDemoReading
+      tags: [readings]
+      summary: Generate a demo sensor reading
+      responses:
+        "201":
+          description: Demo reading generated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SensorReading"
+
+  /readings/device:
+    post:
+      operationId: createDeviceReading
+      tags: [readings]
+      summary: Receive reading from IoT device
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeviceReadingBody"
+      responses:
+        "201":
+          description: Reading received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SensorReading"
+
+  /alerts:
+    get:
+      operationId: getAlerts
+      tags: [alerts]
+      summary: List alerts
+      parameters:
+        - name: status
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of alerts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Alert"
+
+  /alerts/{id}/resolve:
+    put:
+      operationId: resolveAlert
+      tags: [alerts]
+      summary: Resolve an alert
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Alert resolved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Alert"
+        "404":
+          description: Alert not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /recommendations:
+    get:
+      operationId: getRecommendations
+      tags: [recommendations]
+      summary: List recommendations
+      responses:
+        "200":
+          description: List of recommendations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Recommendation"
+
+  /recommendations/generate:
+    post:
+      operationId: generateRecommendations
+      tags: [recommendations]
+      summary: Generate recommendations from latest reading
+      responses:
+        "201":
+          description: Recommendations generated
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Recommendation"
+
+  /devices:
+    get:
+      operationId: getDevices
+      tags: [devices]
+      summary: List devices
+      responses:
+        "200":
+          description: List of devices
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Device"
+    post:
+      operationId: createDevice
+      tags: [devices]
+      summary: Register a new device
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeviceBody"
+      responses:
+        "201":
+          description: Device registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Device"
+
+  /devices/{id}:
+    put:
+      operationId: updateDevice
+      tags: [devices]
+      summary: Update a device
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeviceBody"
+      responses:
+        "200":
+          description: Device updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Device"
+        "404":
+          description: Device not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /analytics/daily:
+    get:
+      operationId: getDailyAnalytics
+      tags: [analytics]
+      summary: Get daily analytics
+      responses:
+        "200":
+          description: Daily analytics data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsData"
+
+  /analytics/weekly:
+    get:
+      operationId: getWeeklyAnalytics
+      tags: [analytics]
+      summary: Get weekly analytics
+      responses:
+        "200":
+          description: Weekly analytics data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsData"
+
+  /analytics/monthly:
+    get:
+      operationId: getMonthlyAnalytics
+      tags: [analytics]
+      summary: Get monthly analytics
+      responses:
+        "200":
+          description: Monthly analytics data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsData"
+
+  /analytics/summary:
+    get:
+      operationId: getAnalyticsSummary
+      tags: [analytics]
+      summary: Get analytics summary
+      responses:
+        "200":
+          description: Analytics summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsSummary"
+
+  /prices:
+    get:
+      operationId: getPrices
+      tags: [prices]
+      summary: List price entries
+      parameters:
+        - name: cropName
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of price entries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PriceEntry"
+    post:
+      operationId: createPriceEntry
+      tags: [prices]
+      summary: Add a price entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreatePriceEntryBody"
+      responses:
+        "201":
+          description: Price entry created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PriceEntry"
+
+  /prices/summary:
+    get:
+      operationId: getPriceSummary
+      tags: [prices]
+      summary: Get price summary with trends for all crops
+      responses:
+        "200":
+          description: Price summary per crop
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PriceSummaryItem"
+
+  /prices/prediction/{cropName}:
+    get:
+      operationId: getPricePrediction
+      tags: [prices]
+      summary: Get price prediction for a crop
+      parameters:
+        - name: cropName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Price prediction
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PricePrediction"
+        "404":
+          description: No data for this crop
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /prices/{id}:
+    delete:
+      operationId: deletePriceEntry
+      tags: [prices]
+      summary: Delete a price entry
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - name
+        - email
+        - createdAt
+
+    RegisterBody:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+      required:
+        - name
+        - email
+        - password
+
+    LoginBody:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      required:
+        - email
+        - password
+
+    AuthResponse:
+      type: object
+      properties:
+        token:
+          type: string
+        user:
+          $ref: "#/components/schemas/User"
+      required:
+        - token
+        - user
+
+    Farm:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        farmerName:
+          type: string
+        farmName:
+          type: string
+        location:
+          type: string
+        regionType:
+          type: string
+        terraceCount:
+          type: ["integer", "null"]
+        farmSize:
+          type: ["string", "null"]
+        soilType:
+          type: ["string", "null"]
+        waterSource:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - farmerName
+        - farmName
+        - location
+        - regionType
+        - createdAt
+        - updatedAt
+
+    FarmBody:
+      type: object
+      properties:
+        farmerName:
+          type: string
+        farmName:
+          type: string
+        location:
+          type: string
+        regionType:
+          type: string
+        terraceCount:
+          type: ["integer", "null"]
+        farmSize:
+          type: ["string", "null"]
+        soilType:
+          type: ["string", "null"]
+        waterSource:
+          type: ["string", "null"]
+      required:
+        - farmerName
+        - farmName
+        - location
+        - regionType
+
+    Crop:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        farmId:
+          type: ["integer", "null"]
+        cropName:
+          type: string
+        cropType:
+          type: string
+        sowingDate:
+          type: ["string", "null"]
+        growthStage:
+          type: string
+        notes:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - cropName
+        - cropType
+        - growthStage
+        - createdAt
+        - updatedAt
+
+    CropBody:
+      type: object
+      properties:
+        cropName:
+          type: string
+        cropType:
+          type: string
+        sowingDate:
+          type: ["string", "null"]
+        growthStage:
+          type: string
+        notes:
+          type: ["string", "null"]
+      required:
+        - cropName
+        - cropType
+        - growthStage
+
+    SensorReading:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        farmId:
+          type: ["integer", "null"]
+        deviceId:
+          type: ["string", "null"]
+        soilMoisture:
+          type: number
+        temperature:
+          type: number
+        humidity:
+          type: number
+        lightIntensity:
+          type: number
+        waterLevel:
+          type: number
+        sourceType:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - soilMoisture
+        - temperature
+        - humidity
+        - lightIntensity
+        - waterLevel
+        - sourceType
+        - createdAt
+
+    ReadingBody:
+      type: object
+      properties:
+        soilMoisture:
+          type: number
+        temperature:
+          type: number
+        humidity:
+          type: number
+        lightIntensity:
+          type: number
+        waterLevel:
+          type: number
+      required:
+        - soilMoisture
+        - temperature
+        - humidity
+        - lightIntensity
+        - waterLevel
+
+    DeviceReadingBody:
+      type: object
+      properties:
+        deviceId:
+          type: string
+        soilMoisture:
+          type: number
+        temperature:
+          type: number
+        humidity:
+          type: number
+        lightIntensity:
+          type: number
+        waterLevel:
+          type: number
+      required:
+        - deviceId
+        - soilMoisture
+        - temperature
+        - humidity
+        - lightIntensity
+        - waterLevel
+
+    Alert:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        farmId:
+          type: ["integer", "null"]
+        title:
+          type: string
+        message:
+          type: string
+        severity:
+          type: string
+        status:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - title
+        - message
+        - severity
+        - status
+        - createdAt
+
+    Recommendation:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        farmId:
+          type: ["integer", "null"]
+        category:
+          type: string
+        message:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - category
+        - message
+        - createdAt
+
+    Device:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        farmId:
+          type: ["integer", "null"]
+        deviceId:
+          type: string
+        deviceName:
+          type: string
+        deviceType:
+          type: string
+        status:
+          type: string
+        lastSync:
+          type: ["string", "null"]
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - deviceId
+        - deviceName
+        - deviceType
+        - status
+        - createdAt
+
+    DeviceBody:
+      type: object
+      properties:
+        deviceId:
+          type: string
+        deviceName:
+          type: string
+        deviceType:
+          type: string
+      required:
+        - deviceId
+        - deviceName
+        - deviceType
+
+    AnalyticsPoint:
+      type: object
+      properties:
+        timestamp:
+          type: string
+        soilMoisture:
+          type: number
+        temperature:
+          type: number
+        humidity:
+          type: number
+        lightIntensity:
+          type: number
+        waterLevel:
+          type: number
+      required:
+        - timestamp
+        - soilMoisture
+        - temperature
+        - humidity
+        - lightIntensity
+        - waterLevel
+
+    AnalyticsData:
+      type: object
+      properties:
+        points:
+          type: array
+          items:
+            $ref: "#/components/schemas/AnalyticsPoint"
+        notes:
+          type: array
+          items:
+            type: string
+      required:
+        - points
+        - notes
+
+    AnalyticsSummary:
+      type: object
+      properties:
+        avgSoilMoisture:
+          type: number
+        avgTemperature:
+          type: number
+        avgHumidity:
+          type: number
+        avgLightIntensity:
+          type: number
+        avgWaterLevel:
+          type: number
+        farmCondition:
+          type: string
+        cropNotes:
+          type: array
+          items:
+            type: string
+        totalReadings:
+          type: integer
+        activeAlerts:
+          type: integer
+      required:
+        - avgSoilMoisture
+        - avgTemperature
+        - avgHumidity
+        - avgLightIntensity
+        - avgWaterLevel
+        - farmCondition
+        - cropNotes
+        - totalReadings
+        - activeAlerts
+
+    PriceEntry:
+      type: object
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        cropName:
+          type: string
+        pricePerKg:
+          type: number
+        marketName:
+          type: string
+        unit:
+          type: string
+        notes:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - userId
+        - cropName
+        - pricePerKg
+        - marketName
+        - unit
+        - createdAt
+
+    CreatePriceEntryBody:
+      type: object
+      properties:
+        cropName:
+          type: string
+        pricePerKg:
+          type: number
+        marketName:
+          type: string
+        unit:
+          type: string
+        notes:
+          type: ["string", "null"]
+      required:
+        - cropName
+        - pricePerKg
+
+    PricePrediction:
+      type: object
+      properties:
+        cropName:
+          type: string
+        currentPrice:
+          type: number
+        nextDayPrice:
+          type: number
+        nextWeekPrice:
+          type: number
+        trend:
+          type: string
+        trendPercent:
+          type: number
+        dataPoints:
+          type: integer
+        note:
+          type: string
+      required:
+        - cropName
+        - currentPrice
+        - nextDayPrice
+        - nextWeekPrice
+        - trend
+        - trendPercent
+        - dataPoints
+        - note
+
+    PriceSummaryItem:
+      type: object
+      properties:
+        cropName:
+          type: string
+        latestPrice:
+          type: number
+        marketName:
+          type: string
+        trend:
+          type: string
+        trendPercent:
+          type: number
+        entryCount:
+          type: integer
+      required:
+        - cropName
+        - latestPrice
+        - marketName
+        - trend
+        - trendPercent
+        - entryCount

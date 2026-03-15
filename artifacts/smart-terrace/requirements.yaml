@@ -1,0 +1,21 @@
+packages:
+  "framer-motion": "Animations and page transitions for a premium feel"
+  "recharts": "Required for analytics charts"
+  "date-fns": "For formatting dates nicely across the dashboard"
+  "react-hook-form": "For robust form handling"
+  "@hookform/resolvers": "For Zod schema validation with react-hook-form"
+  "zod": "Schema validation for forms"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to merge tailwind classes"
+
+images:
+  - path: "artifacts/smart-terrace/public/images/logo.png"
+    description: "Minimal modern agricultural logo featuring a green leaf and a subtle mountain terrace shape, solid deep green, transparent background"
+    aspect_ratio: "1:1"
+  - path: "artifacts/smart-terrace/public/images/login-bg.png"
+    description: "Beautiful lush green terraced farming fields in golden hour sunlight, soft atmospheric modern aesthetic, high quality, landscape photography"
+    aspect_ratio: "16:9"
+
+notes:
+  - "The API client uses a custom fetch wrapper. I am intercepting window.fetch globally to inject the JWT token so that all generated React Query hooks automatically authenticate."
+  - "All generated hooks are imported from @workspace/api-client-react"

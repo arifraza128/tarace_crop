@@ -1,0 +1,555 @@
+Build a full-stack web app called “Smart Terrace Farming System” for sustainable agriculture in hilly regions.
+
+IMPORTANT CONSTRAINT:
+This project must be optimized for Replit free version. Keep it lightweight, practical, and easy to run in a single Replit workspace. Do not overbuild unnecessary production-level features. Keep the important modules only, but make the app look complete and usable for a college/project demo.
+
+PROJECT PURPOSE:
+This app helps farmers monitor terrace farms using IoT sensor data and gives smart recommendations for irrigation, fertilizer timing, crop care, and farm management. The app should be farmer-friendly, simple, modern, clean, and mobile responsive.
+
+CORE IDEA:
+Sensors installed in the farm collect:
+- soil moisture
+- temperature
+- humidity
+- light intensity
+- water level
+
+An ESP32/NodeMCU device can send the data to the backend using API endpoints. The backend stores the data in a database, analyzes it using simple rule-based logic, and shows recommendations, alerts, and analytics in a dashboard.
+
+This app must support both:
+1. Demo mode with simulated/mock sensor data
+2. Future IoT mode where ESP32 can send readings through REST API
+
+TECH STACK:
+- Frontend: React
+- Styling: Tailwind CSS
+- Backend: Node.js + Express
+- Database: SQLite
+- Charts: Recharts
+- Authentication: simple JWT based login
+- API: REST API
+
+BUILD ONLY THE IMPORTANT MODULES FOR VERSION 1:
+
+1. AUTHENTICATION
+Features:
+- Register
+- Login
+- Logout
+
+User fields:
+- name
+- email
+- password
+
+Requirements:
+- Store hashed passwords
+- Use JWT authentication
+- Protect private routes
+
+2. FARM SETUP MODULE
+Allow logged-in farmer to create and update farm profile.
+
+Fields:
+- farmer name
+- farm name
+- farm location
+- region type (default: hilly)
+- terrace count
+- farm size
+- soil type
+- water source
+
+Requirements:
+- one farm profile per user is enough for MVP
+- editable form
+- show saved farm profile in settings or dashboard
+
+3. CROP MANAGEMENT MODULE
+Allow farmers to manage crop details.
+
+Fields:
+- crop name
+- crop type
+- sowing date
+- growth stage
+- notes
+
+Features:
+- add crop
+- edit crop
+- delete crop
+- list all crops
+
+Growth stage examples:
+- seedling
+- vegetative
+- flowering
+- fruiting
+- harvesting
+
+4. SENSOR DATA MODULE
+Store sensor readings with timestamps.
+
+Fields:
+- soil moisture
+- temperature
+- humidity
+- light intensity
+- water level
+- timestamp
+- source type (manual, demo, device)
+
+Features:
+- manual sensor data entry form
+- demo mode button to generate random readings
+- save all readings to database
+- latest readings section
+- historical readings for charts
+
+Add API endpoint for future ESP32 integration:
+POST /api/readings/device
+Body example:
+{
+  "deviceId": "ESP32-001",
+  "soilMoisture": 35,
+  "temperature": 28,
+  "humidity": 62,
+  "lightIntensity": 700,
+  "waterLevel": 40
+}
+
+5. DASHBOARD
+Create a clean farmer-friendly dashboard.
+
+Dashboard should show:
+- latest sensor values in cards
+- farm summary
+- current crop info
+- irrigation status
+- farm health status
+- active alerts
+- recommendation summary
+- small recent trends chart
+
+Example dashboard cards:
+- Soil Moisture
+- Temperature
+- Humidity
+- Light Intensity
+- Water Level
+- Farm Health
+
+6. RECOMMENDATION ENGINE
+Use simple rule-based logic only. Organize code in a way that AI/ML can be added later.
+
+Rules:
+- If soil moisture is below threshold, show “Irrigation needed”
+- If temperature is high and humidity is low, show “Risk of crop stress”
+- If water level is low, show “Check water source”
+- If light is too low, show “Low sunlight detected”
+- If light is too high, show “Excessive sunlight exposure”
+- Based on crop type and growth stage, show fertilizer timing suggestion
+- Show general crop care advice based on sensor conditions
+
+Examples:
+- “Soil moisture is critically low. Irrigation is recommended.”
+- “Temperature is high and humidity is low. Crop stress risk detected.”
+- “Water level is dropping. Check water storage or source.”
+- “Current crop is in flowering stage. Nutrient support may be needed.”
+
+7. ALERTS MODULE
+Create an alerts system and store alerts in database.
+
+Alert types:
+- Low soil moisture
+- High temperature
+- Low water level
+- Sensor offline
+- Crop stress warning
+
+Features:
+- show active alerts on dashboard
+- dedicated alerts page
+- mark alert as read or resolved
+- store alert time and severity
+
+Severity examples:
+- low
+- medium
+- high
+
+Sensor offline logic:
+- if no sensor reading received for a defined time interval, create offline alert
+
+8. ANALYTICS PAGE
+Keep this module in version 1, but make it lightweight for Replit free plan.
+
+Include:
+- Daily trends
+- Weekly trends
+- Monthly trends
+- Water usage insights
+- Farm condition trends
+- Crop performance notes
+
+Implementation rules:
+- Use Recharts
+- Use aggregated data from stored sensor readings
+- Avoid heavy computation
+- No machine learning
+- Use rule-based summaries for crop notes
+
+Analytics should show:
+- soil moisture trend
+- temperature trend
+- humidity trend
+- light intensity trend
+- water level trend
+- estimated water requirement insight
+- overall farm condition trend
+- crop performance notes
+
+Example crop performance notes:
+- “Moisture has remained low for 3 days”
+- “Temperature stress risk observed this week”
+- “Current crop stage may require fertilizer application”
+- “Farm conditions are stable”
+
+Trend options:
+- Daily = recent 24 hours
+- Weekly = last 7 days average
+- Monthly = last 30 days average
+
+9. DEVICE MODULE
+Keep this simple.
+
+Fields:
+- device ID
+- device name
+- device type
+- status
+- last sync time
+
+Features:
+- register a device manually
+- list registered devices
+- show online/offline status
+- update last sync time when device API sends data
+
+10. SETTINGS / PROFILE PAGE
+Allow user to:
+- view profile
+- update name
+- update farm profile
+- change password later if simple to implement
+- view registered device info
+
+DATABASE TABLES / MODELS:
+Create tables/models for:
+- users
+- farms
+- crops
+- devices
+- sensor_readings
+- alerts
+- recommendations
+
+Suggested structure:
+
+users
+- id
+- name
+- email
+- password_hash
+- created_at
+
+farms
+- id
+- user_id
+- farmer_name
+- farm_name
+- location
+- region_type
+- terrace_count
+- farm_size
+- soil_type
+- water_source
+- created_at
+- updated_at
+
+crops
+- id
+- user_id
+- farm_id
+- crop_name
+- crop_type
+- sowing_date
+- growth_stage
+- notes
+- created_at
+- updated_at
+
+devices
+- id
+- user_id
+- farm_id
+- device_id
+- device_name
+- device_type
+- status
+- last_sync
+- created_at
+
+sensor_readings
+- id
+- user_id
+- farm_id
+- device_id (nullable)
+- soil_moisture
+- temperature
+- humidity
+- light_intensity
+- water_level
+- source_type
+- created_at
+
+alerts
+- id
+- user_id
+- farm_id
+- title
+- message
+- severity
+- status
+- created_at
+
+recommendations
+- id
+- user_id
+- farm_id
+- category
+- message
+- created_at
+
+API ROUTES:
+Create backend routes for:
+
+Auth:
+- POST /api/auth/register
+- POST /api/auth/login
+- GET /api/auth/me
+
+Farm:
+- GET /api/farm
+- POST /api/farm
+- PUT /api/farm
+
+Crops:
+- GET /api/crops
+- POST /api/crops
+- PUT /api/crops/:id
+- DELETE /api/crops/:id
+
+Readings:
+- GET /api/readings
+- POST /api/readings/manual
+- POST /api/readings/demo
+- POST /api/readings/device
+- GET /api/readings/latest
+
+Alerts:
+- GET /api/alerts
+- PUT /api/alerts/:id/resolve
+
+Recommendations:
+- GET /api/recommendations
+- POST /api/recommendations/generate
+
+Devices:
+- GET /api/devices
+- POST /api/devices
+- PUT /api/devices/:id
+
+Analytics:
+- GET /api/analytics/daily
+- GET /api/analytics/weekly
+- GET /api/analytics/monthly
+- GET /api/analytics/summary
+
+RULE ENGINE LOGIC:
+Create a separate utility/service file for recommendation and alert generation.
+
+Suggested thresholds:
+- soil moisture < 30 => irrigation alert
+- temperature > 35 and humidity < 40 => crop stress alert
+- water level < 25 => low water alert
+- light intensity < 200 => low sunlight warning
+- light intensity > 900 => excessive sunlight warning
+
+When a new reading is inserted:
+- generate relevant alerts
+- generate recommendations
+- save them in database
+- update dashboard summary
+
+DEMO MODE:
+This is very important.
+
+Add a button in UI:
+“Generate Demo Reading”
+
+When clicked:
+- create random realistic sensor data
+- save into sensor_readings table
+- run alert logic
+- run recommendation logic
+- refresh dashboard and analytics
+
+Example random ranges:
+- soil moisture: 20–80
+- temperature: 18–38
+- humidity: 30–90
+- light intensity: 100–1000
+- water level: 10–100
+
+PAGES TO BUILD:
+Build these pages:
+
+1. Login Page
+2. Register Page
+3. Dashboard Page
+4. Farm Setup Page
+5. Crop Management Page
+6. Sensor Readings Page
+7. Alerts Page
+8. Analytics Page
+9. Device Page
+10. Settings/Profile Page
+
+UI REQUIREMENTS:
+- green agriculture theme
+- clean layout
+- modern cards
+- sidebar navigation
+- top navbar
+- mobile responsive
+- farmer-friendly labels
+- simple charts
+- avoid overly complex design
+
+Frontend suggestions:
+- Sidebar with links:
+  - Dashboard
+  - Farm Setup
+  - Crops
+  - Sensor Readings
+  - Alerts
+  - Analytics
+  - Devices
+  - Settings
+
+COMPONENTS TO CREATE:
+- Layout
+- Sidebar
+- Navbar
+- ProtectedRoute
+- StatCard
+- AlertCard
+- RecommendationCard
+- TrendChart
+- FarmForm
+- CropForm
+- DeviceForm
+- SensorReadingForm
+
+BACKEND STRUCTURE:
+Organize backend cleanly with:
+- routes
+- controllers
+- middleware
+- services
+- models or db helpers
+- utils
+
+FRONTEND STRUCTURE:
+Organize frontend cleanly with:
+- pages
+- components
+- services/api
+- hooks if needed
+- auth context
+
+SEED / DEMO DATA:
+Add seed/demo data for:
+- one test user
+- one farm
+- one crop
+- one device
+- several sensor readings
+- a few alerts
+- a few recommendations
+
+Example demo login:
+email: demo@farm.com
+password: password123
+
+CODE REQUIREMENTS:
+- clean folder structure
+- reusable React components
+- proper API service functions
+- comments for important logic
+- simple error handling
+- loading states where needed
+- make the app runnable directly in Replit
+- keep dependencies minimal
+- do not use heavy unnecessary packages
+
+REPLIT COMPATIBILITY:
+Make this project easy to run inside one Replit project.
+
+Preferred setup:
+- one backend folder
+- one frontend folder
+- root package.json with scripts if needed
+- simple instructions to run frontend and backend together
+
+If needed, use:
+- backend on Express
+- frontend on Vite React
+
+Add scripts like:
+- npm install
+- npm run dev
+
+FINAL OUTPUT REQUIRED:
+Generate:
+1. Complete project folder structure
+2. Backend code
+3. Frontend code
+4. SQLite database setup
+5. API routes and controllers
+6. Rule engine logic
+7. Demo seed data
+8. Setup instructions
+9. Instructions for running on Replit
+10. Clear explanation of which file does what
+
+IMPORTANT:
+This is an MVP for Replit free plan, so focus on:
+- core smart farming workflow
+- dashboard
+- alerts
+- recommendations
+- analytics
+- demo mode
+- clean UI
+
+Do not add:
+- heavy ML models
+- SMS/email integrations
+- complex real-time socket systems
+- advanced production infrastructure
+- unnecessary external services
+
+The app should feel complete, but remain lightweight and practical.

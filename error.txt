@@ -1,0 +1,419 @@
+
+=== artifacts/smart-terrace ===
+FAILED
+STDOUT: src/components/layout/AppLayout.tsx(41,5): error TS2741: Property 'queryKey' is missing in type '{ retry: false; }' but required in type 'UseQueryOptions<Farm, ErrorType<ErrorResponse>, Farm, readonly unknown[]>'.
+src/components/ui/alert-dialog.tsx(5,32): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/button.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/alert-dialog.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/calendar.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/carousel.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/pagination.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/components/ui/calendar.tsx(12,40): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/button.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/alert-dialog.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/calendar.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/carousel.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/pagination.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/components/ui/carousel.tsx(8,24): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/button.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/alert-dialog.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/calendar.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/carousel.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/pagination.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/components/ui/command.tsx(9,39): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/dialog.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Dialog.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/command.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/components/ui/input-group.tsx(5,24): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/button.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/alert-dialog.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/calendar.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/carousel.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/pagination.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/components/ui/input-group.tsx(6,23): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Input.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/components/ui/pagination.tsx(5,45): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/button.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/alert-dialog.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/calendar.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/carousel.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/pagination.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/components/ui/sidebar.tsx(10,24): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/button.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/alert-dialog.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/calendar.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/carousel.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/pagination.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/components/ui/sidebar.tsx(11,23): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Input.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/hooks/use-auth.tsx(21,5): error TS2741: Property 'queryKey' is missing in type '{ enabled: boolean; retry: false; }' but required in type 'UseQueryOptions<User, ErrorType<ErrorResponse>, User, readonly unknown[]>'.
+src/pages/alerts.tsx(4,35): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/alerts.tsx(108,28): error TS2322: Type '"default" | "destructive" | "warning"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+  Type '"warning"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+src/pages/alerts.tsx(126,19): error TS2322: Type '{ children: string; variant: "outline"; className: string; onClick: () => void; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/analytics.tsx(3,58): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/analytics.tsx(15,45): error TS2741: Property 'queryKey' is missing in type '{ enabled: boolean; }' but required in type 'UseQueryOptions<AnalyticsData, ErrorType<unknown>, AnalyticsData, readonly unknown[]>'.
+src/pages/analytics.tsx(16,47): error TS2741: Property 'queryKey' is missing in type '{ enabled: boolean; }' but required in type 'UseQueryOptions<AnalyticsData, ErrorType<unknown>, AnalyticsData, readonly unknown[]>'.
+src/pages/analytics.tsx(17,49): error TS2741: Property 'queryKey' is missing in type '{ enabled: boolean; }' but required in type 'UseQueryOptions<AnalyticsData, ErrorType<unknown>, AnalyticsData, readonly unknown[]>'.
+src/pages/analytics.tsx(38,13): error TS2322: Type '"ghost" | "primary"' is not assignable to type '"link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined'.
+  Type '"primary"' is not assignable to type '"link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined'.
+src/pages/analytics.tsx(46,13): error TS2322: Type '"ghost" | "primary"' is not assignable to type '"link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined'.
+  Type '"primary"' is not assignable to type '"link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined'.
+src/pages/analytics.tsx(54,13): error TS2322: Type '"ghost" | "primary"' is not assignable to type '"link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined'.
+  Type '"primary"' is not assignable to type '"link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined'.
+src/pages/crops.tsx(14,35): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/crops.tsx(18,24): error TS1261: Already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Dialog.tsx' differs from file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/dialog.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/dialog" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/command.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/crops.tsx(189,9): error TS2322: Type '{ children: Element; isOpen: boolean; onClose: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & DialogProps'.
+  Property 'isOpen' does not exist on type 'IntrinsicAttributes & DialogProps'. Did you mean 'open'?
+src/pages/crops.tsx(194,94): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "cropName"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/crops.tsx(195,96): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "cropType"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/crops.tsx(212,18): error TS2322: Type '{ onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "sowingDate"; min?: string | number | undefined; max?: string | number | undefined; ... 6 more ...; type: "date"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+src/pages/crops.tsx(223,52): error TS2322: Type '{ children: string; type: "submit"; className: string; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/dashboard.tsx(15,75): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/dashboard.tsx(17,23): error TS1261: Already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Badge.tsx' differs from file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/badge.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Badge" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Badge" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Badge" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Badge" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Badge" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Badge" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/dashboard.tsx(40,39): error TS2741: Property 'queryKey' is missing in type '{ retry: false; }' but required in type 'UseQueryOptions<Farm, ErrorType<ErrorResponse>, Farm, readonly unknown[]>'.
+src/pages/dashboard.tsx(41,50): error TS2741: Property 'queryKey' is missing in type '{ retry: false; }' but required in type 'UseQueryOptions<SensorReading, ErrorType<ErrorResponse>, SensorReading, readonly unknown[]>'.
+src/pages/dashboard.tsx(57,60): error TS2741: Property 'queryKey' is missing in type '{ retry: false; }' but required in type 'UseQueryOptions<PriceSummaryItem[], ErrorType<unknown>, PriceSummaryItem[], readonly unknown[]>'.
+src/pages/dashboard.tsx(93,11): error TS2322: Type '{ children: (string | Element)[]; onClick: () => void; isLoading: boolean; variant: "secondary"; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/dashboard.tsx(114,23): error TS2322: Type '"primary"' is not assignable to type '"link" | "default" | "destructive" | "outline" | "secondary" | "ghost" | null | undefined'.
+src/pages/dashboard.tsx(186,20): error TS2322: Type '"destructive" | "success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+  Type '"success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+src/pages/devices.tsx(7,35): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/devices.tsx(85,26): error TS2322: Type '"destructive" | "success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+  Type '"success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+src/pages/devices.tsx(105,9): error TS2322: Type '{ children: Element; isOpen: boolean; onClose: () => void; title: string; description: string; }' is not assignable to type 'IntrinsicAttributes & DialogProps'.
+  Property 'isOpen' does not exist on type 'IntrinsicAttributes & DialogProps'. Did you mean 'open'?
+src/pages/devices.tsx(115,13): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "deviceId"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/devices.tsx(121,13): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "deviceName"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/devices.tsx(136,57): error TS2322: Type '{ children: string; type: "submit"; className: string; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/farm.tsx(6,75): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/farm.tsx(31,5): error TS2741: Property 'queryKey' is missing in type '{ retry: false; }' but required in type 'UseQueryOptions<Farm, ErrorType<ErrorResponse>, Farm, readonly unknown[]>'.
+src/pages/farm.tsx(97,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "farmName"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/farm.tsx(103,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "farmerName"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/farm.tsx(109,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "location"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/farm.tsx(128,19): error TS2322: Type '{ onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "terraceCount"; min?: string | number | undefined; max?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+src/pages/farm.tsx(134,19): error TS2322: Type '{ onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "farmSize"; min?: string | number | undefined; max?: string | number | undefined; ... 6 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+src/pages/farm.tsx(139,19): error TS2322: Type '{ onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "soilType"; min?: string | number | undefined; max?: string | number | undefined; ... 6 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+src/pages/farm.tsx(144,19): error TS2322: Type '{ onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "waterSource"; min?: string | number | undefined; max?: string | number | undefined; ... 6 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+src/pages/farm.tsx(152,47): error TS2322: Type '{ children: string; type: "submit"; size: "lg"; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/login.tsx(7,23): error TS1261: Already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Input.tsx' differs from file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/input" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/pages/login.tsx(8,24): error TS1261: Already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Button.tsx' differs from file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/login.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/register.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/alert-dialog.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/calendar.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/carousel.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/input-group.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/pagination.tsx'
+    Imported via "@/components/ui/button" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/sidebar.tsx'
+src/pages/login.tsx(95,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "email"; min?: string | number | undefined; ... 8 more ...; type: "email"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/login.tsx(103,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "password"; min?: string | number | undefined; ... 8 more ...; type: "password"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/login.tsx(110,17): error TS2322: Type '{ children: string; type: "submit"; className: string; size: "lg"; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/prices.tsx(13,75): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/prices.tsx(104,7): error TS2741: Property 'queryKey' is missing in type '{ enabled: boolean; retry: false; }' but required in type 'UseQueryOptions<PricePrediction, ErrorType<ErrorResponse>, PricePrediction, readonly unknown[]>'.
+src/pages/readings.tsx(12,35): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/readings.tsx(76,75): error TS2322: Type '{ children: (string | Element)[]; variant: "outline"; onClick: () => void; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/readings.tsx(116,30): error TS2322: Type '"outline" | "success" | "warning"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+  Type '"success"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | null | undefined'.
+src/pages/readings.tsx(129,9): error TS2322: Type '{ children: Element; isOpen: boolean; onClose: () => void; title: string; description: string; }' is not assignable to type 'IntrinsicAttributes & DialogProps'.
+  Property 'isOpen' does not exist on type 'IntrinsicAttributes & DialogProps'. Did you mean 'open'?
+src/pages/readings.tsx(136,90): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "soilMoisture"; min?: string | number | undefined; ... 7 more ...; type: "number"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/readings.tsx(137,88): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "temperature"; min?: string | number | undefined; ... 7 more ...; type: "number"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/readings.tsx(138,81): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "humidity"; min?: string | number | undefined; ... 7 more ...; type: "number"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/readings.tsx(139,86): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "waterLevel"; min?: string | number | undefined; ... 7 more ...; type: "number"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/readings.tsx(141,94): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "lightIntensity"; min?: string | number | undefined; ... 7 more ...; type: "number"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/readings.tsx(143,57): error TS2322: Type '{ children: string; type: "submit"; className: string; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/register.tsx(66,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "name"; min?: string | number | undefined; ... 7 more ...; placeholder: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/register.tsx(74,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "email"; min?: string | number | undefined; ... 8 more ...; type: "email"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/register.tsx(82,17): error TS2322: Type '{ error: string | undefined; onChange: ChangeHandler; onBlur: ChangeHandler; ref: RefCallBack; name: "password"; min?: string | number | undefined; ... 8 more ...; type: "password"; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'.
+  Property 'error' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & RefAttributes<...>'. Did you mean 'onError'?
+src/pages/register.tsx(89,17): error TS2322: Type '{ children: string; type: "submit"; className: string; size: "lg"; isLoading: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'isLoading' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/settings.tsx(2,75): error TS1149: File name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/Card.tsx' differs from already included file name 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/not-found.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/dashboard.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/farm.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/crops.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/readings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/alerts.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/analytics.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/devices.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/settings.tsx'
+    Imported via "@/components/ui/Card" from file 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/src/pages/prices.tsx'
+    Matched by include pattern 'src/**/*' in 'C:/Users/arif3/Downloads/terrece-master/terrece-master/artifacts/smart-terrace/tsconfig.json'
+src/pages/settings.tsx(10,39): error TS2741: Property 'queryKey' is missing in type '{ retry: false; }' but required in type 'UseQueryOptions<Farm, ErrorType<ErrorResponse>, Farm, readonly unknown[]>'.
+
+STDERR: 
+
+=== artifacts/mockup-sandbox ===
+SUCCESS
+
