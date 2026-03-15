@@ -1,9 +1,22 @@
 [build]
-  command = "pnpm --filter @workspace/smart-terrace build"
+  command = "pnpm install && pnpm --filter @workspace/smart-terrace build"
   publish = "artifacts/smart-terrace/dist/public"
 
 [build.environment]
   NODE_VERSION = "20"
+  PNPM_VERSION = "9"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["@electric-sql/pglite", "pg", "pg-native"]
+
+# Route all /api/* requests to the serverless function BEFORE the SPA fallback
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"

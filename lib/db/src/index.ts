@@ -188,10 +188,23 @@ async function createDatabase() {
     };
   }
 
-  console.warn(
-    "DATABASE_URL is not set. Using embedded PGlite seeded with demo data.",
+  const isServerless = !!(
+    process.env.NETLIFY ||
+    process.env.AWS_LAMBDA_FUNCTION_NAME ||
+    process.env.LAMBDA_TASK_ROOT
   );
-  const client = new PGlite({ dataDir: localDataDir });
+
+  if (isServerless) {
+    console.warn(
+      "Serverless environment detected. Using in-memory PGlite seeded with demo data.",
+    );
+  } else {
+    console.warn(
+      "DATABASE_URL is not set. Using embedded PGlite seeded with demo data.",
+    );
+  }
+
+  const client = isServerless ? new PGlite() : new PGlite({ dataDir: localDataDir });
   await initializeLocalDatabase(client);
   return {
     pool: client,

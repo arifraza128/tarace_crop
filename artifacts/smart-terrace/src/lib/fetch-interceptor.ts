@@ -6,17 +6,16 @@
 
 const originalFetch = window.fetch;
 
-const configuredApiBaseInput = (import.meta.env.VITE_API_BASE_URL as string | undefined)
+// VITE_API_BASE_URL is optional. If set, relative /api/* calls are rewritten to
+// that absolute base (useful when backend is hosted separately). When not set,
+// /api/* calls are kept relative — they are handled by the Netlify Function redirect.
+const rawApiBase = (import.meta.env.VITE_API_BASE_URL as string | undefined)
   ?.trim()
   .replace(/\/$/, "");
 
-function resolveConfiguredApiPrefix(baseUrl: string | undefined): string | undefined {
-  if (!baseUrl) return undefined;
-  if (baseUrl.endsWith("/api")) return baseUrl;
-  return `${baseUrl}/api`;
-}
-
-const configuredApiPrefix = resolveConfiguredApiPrefix(configuredApiBaseInput);
+const configuredApiPrefix = rawApiBase
+  ? (rawApiBase.endsWith("/api") ? rawApiBase : `${rawApiBase}/api`)
+  : undefined;
 
 function getRequestUrl(resource: RequestInfo | URL): string {
   if (typeof resource === "string") return resource;
