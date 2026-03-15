@@ -13,7 +13,7 @@ const rawApiBase = (import.meta.env.VITE_API_BASE_URL as string | undefined)
   ?.trim()
   .replace(/\/$/, "");
 
-const configuredApiPrefix = rawApiBase
+const configuredApiPrefix = import.meta.env.DEV && rawApiBase
   ? (rawApiBase.endsWith("/api") ? rawApiBase : `${rawApiBase}/api`)
   : undefined;
 
