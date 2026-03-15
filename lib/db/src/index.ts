@@ -180,12 +180,19 @@ async function initializeLocalDatabase(client: PGlite): Promise<void> {
 
 async function createDatabase() {
   if (process.env.DATABASE_URL) {
-    const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-    await pool.query(schemaInitializationSql);
-    return {
-      pool,
-      db: drizzleNodePg(pool, { schema }),
-    };
+    try {
+      const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+      await pool.query(schemaInitializationSql);
+      return {
+        pool,
+        db: drizzleNodePg(pool, { schema }),
+      };
+    } catch (error) {
+      console.error(
+        "Failed to connect/init DATABASE_URL. Falling back to embedded PGlite.",
+        error,
+      );
+    }
   }
 
   const isServerless = !!(
