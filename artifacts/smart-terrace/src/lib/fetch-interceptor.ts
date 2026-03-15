@@ -6,9 +6,17 @@
 
 const originalFetch = window.fetch;
 
-const configuredApiBase = (import.meta.env.VITE_API_BASE_URL as string | undefined)
+const configuredApiBaseInput = (import.meta.env.VITE_API_BASE_URL as string | undefined)
   ?.trim()
   .replace(/\/$/, "");
+
+function resolveConfiguredApiPrefix(baseUrl: string | undefined): string | undefined {
+  if (!baseUrl) return undefined;
+  if (baseUrl.endsWith("/api")) return baseUrl;
+  return `${baseUrl}/api`;
+}
+
+const configuredApiPrefix = resolveConfiguredApiPrefix(configuredApiBaseInput);
 
 function getRequestUrl(resource: RequestInfo | URL): string {
   if (typeof resource === "string") return resource;
@@ -19,8 +27,8 @@ function getRequestUrl(resource: RequestInfo | URL): string {
 
 function isApiRequest(url: string): boolean {
   if (url.startsWith("/api")) return true;
-  if (!configuredApiBase) return false;
-  return url.startsWith(`${configuredApiBase}/api`);
+  if (!configuredApiPrefix) return false;
+  return url.startsWith(configuredApiPrefix);
 }
 
 function isAuthEndpoint(url: string): boolean {
@@ -29,11 +37,11 @@ function isAuthEndpoint(url: string): boolean {
 
 function resolveRequestTarget(resource: RequestInfo | URL): RequestInfo | URL {
   const url = getRequestUrl(resource);
-  if (!configuredApiBase || !url.startsWith("/api")) {
+  if (!configuredApiPrefix || !url.startsWith("/api")) {
     return resource;
   }
 
-  const absoluteUrl = `${configuredApiBase}${url}`;
+  const absoluteUrl = `${configuredApiPrefix}${url.slice(4)}`;
   if (resource instanceof Request) {
     return new Request(absoluteUrl, resource);
   }
